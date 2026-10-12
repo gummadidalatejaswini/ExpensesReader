@@ -29,9 +29,34 @@
 		236776CE307CF6EA0093C226 /* ExpensesReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		230558DE307D22CC00414E5A /* Exceptions for "ExpensesReader" folder in "ExpensesReaderTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Core/DI/AppContainer.swift,
+				Data/DTO/ExpensesRecord.m,
+				Data/DTO/ExpensesTransformer.m,
+				Data/Mapping/ExpnesesMapper.swift,
+				Data/Networking/APIClient.swift,
+				Data/Repository/ExpensesRepository.swift,
+				Domain/Entity/Expenses.swift,
+				Domain/UseCases/ExpensesUseCase.swift,
+				Presentation/EmptyExpensesView.swift,
+				Presentation/ErrorView.swift,
+				Presentation/ExpensesRowView.swift,
+				Presentation/ExpensesViewModel.swift,
+				Resources/Localization/AppStrings.swift,
+			);
+			target = 236776C3307CF6EA0093C226 /* ExpensesReaderTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		236776B9307CF6E90093C226 /* ExpensesReader */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				230558DE307D22CC00414E5A /* Exceptions for "ExpensesReader" folder in "ExpensesReaderTests" target */,
+			);
 			path = ExpensesReader;
 			sourceTree = "<group>";
 		};
@@ -472,6 +497,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpensesReaderTests/ExpensesReaderTests-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,6 +519,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpensesReaderTests/ExpensesReaderTests-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

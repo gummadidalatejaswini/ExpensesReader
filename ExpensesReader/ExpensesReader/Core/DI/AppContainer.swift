@@ -4,7 +4,7 @@
 //
 //  Created by Tejaswini Gummadidala on 12/10/26.
 //
-
+@MainActor
 struct AppContainer {
     let expenseViewModel: ExpensesViewModel
 
