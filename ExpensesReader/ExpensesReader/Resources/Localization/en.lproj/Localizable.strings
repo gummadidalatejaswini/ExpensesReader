@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  ExpensesReader
+
+  Created by Tejaswini Gummadidala on 12/10/26.
+  
+*/
+
+
+/* Expense list */
+"expenses.title" = "Expenses";
+"expenses.loading" = "Loading expenses...";
+"expenses.empty.title" = "No Expenses";
+"expenses.empty.description" = "There are no expenses to display.";
+
+/* Errors */
+"expenses.error.message" = "Unable to load expenses. Please try again.";
+
+/* Actions */
+"common.retry" = "Retry";
+
+/* Accessibility */
+"expense.amount.accessibility" = "Expense amount";
+"expense.date.accessibility" = "Expense date";

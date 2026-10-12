@@ -18,18 +18,31 @@ struct ExpensesView: View {
         NavigationStack {
         Group {
             if viewModel.isLoading && viewModel.expenses.isEmpty {
-                ProgressView("Loading expenses...")
-            } else {
-                List(viewModel.expenses) { expense in
-                    ExpensesRowView(expense: expense)
+                ProgressView(AppStrings.Expenses.loading)
+            } else if let error = viewModel.errorMessage {
+                ErrorView(message: error) {
+                    Task {
+                        await viewModel.loadExpenses()
+                    }
                 }
-                .listStyle(.insetGrouped)
+            } else if viewModel.expenses.isEmpty {
+                EmptyExpensesView()
+            }  else {
+                expenseList
             }
         }
-        .navigationTitle("Expenses")
+        .navigationTitle(AppStrings.Expenses.title)
         .task {
             await viewModel.loadExpenses()
             }
         }
     }
+    
+    private var expenseList: some View {
+           List(viewModel.expenses) { expense in
+               ExpensesRowView(expense: expense)
+           }
+           .listStyle(.insetGrouped)
+       }
+    
 }

@@ -30,7 +30,7 @@ final class ExpensesViewModel: ObservableObject {
         do {
             expenses = try await useCase.execute()
         } catch {
-            errorMessage = "Unable to load expenses. Please try again."
+            errorMessage = AppStrings.Expenses.errorMessage
         }
     }
 }
