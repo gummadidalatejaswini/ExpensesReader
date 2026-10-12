@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ExpensesReaderApp: App {
+    private let container = AppContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExpensesView(viewModel: container.expenseViewModel)
         }
     }
 }
